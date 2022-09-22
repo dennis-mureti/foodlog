@@ -1,27 +1,44 @@
 <div id="<%= dom_id entry %>">
-  <p>
-    <strong>Meal type:</strong>
+<div class = "columns mt-6 is-centered">
+
+<div class ="column is-one-quarter">
+<div class ="card">
+  <header class="card-header">
+  <p class = "card-header-title">
+   
     <%= entry.meal_type %>
   </p>
+  </header>
 
+  <div class = "card-content">
+  <div class="content">
   <p>
-    <strong>Calories:</strong>
-    <%= entry.calories %>
+  <span class ="has-text-weight-bold"><strong>Calories:</strong>
+    <%= entry.calories %></span>
   </p>
 
   <p>
-    <strong>Proteins:</strong>
-    <%= entry.proteins %>
+  <span class ="has-text-weight-bold"><strong>Grams of protein:</strong>
+    <%= entry.proteins %></span>
   </p>
 
   <p>
-    <strong>Carbohydrates:</strong>
-    <%= entry.carbohydrates %>
+  <span class ="has-text-weight-bold"><strong>Grams of carbohydrates:</strong>
+    <%= entry.carbohydrates %></span>
   </p>
 
   <p>
-    <strong>Fats:</strong>
-    <%= entry.fats %>
+  <span class ="has-text-weight-bold"><strong>Grams of fat:</strong>
+    <%= entry.fats %></span>
   </p>
-
+  <p class="italic">Logged <%= time_ago_in_words(entry.created_at) %> ago</p>
+  </div>
+  </div>
+  <div class="card-footer">
+      <%= link_to "Show entry", entry, class: "card-footer-item" %>
+      <%= link_to "Edit entry", edit_entry_path(entry), class: "card-footer-item" %>
+    </div>
+  </div>
+  </div>
+  </div>
 </div>

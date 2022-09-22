@@ -5,19 +5,13 @@
 <% end %>
 
 <div id="entries">
-<div class="columns mt-6 is-centered">
   <% @entries.each do |entry| %>
-    <div class="column.is-one-quarter">
-    <div class= "card">
+   
      
     <%= render entry %>
 
-    <div class="card-footer">
-      <%= link_to "Show this entry", entry, class: "card-footer-item" %>
-    </div>
-    </div>
-    </div>
-    </div>
+    
+   
   <% end %>
 </div>
 
