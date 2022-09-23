@@ -37,6 +37,7 @@
   <div class="card-footer">
       <%= link_to "Show entry", entry, class: "card-footer-item" %>
       <%= link_to "Edit entry", edit_entry_path(entry), class: "card-footer-item" %>
+      <%= link_to "Destroy", @entry, method: :delete, class: "card-footer-item" %>
     </div>
   </div>
   </div>
