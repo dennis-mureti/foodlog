@@ -1,9 +1,46 @@
 
-<%= render @entry %>
+<div id="<%= dom_id @entry %>">
+<div class = "columns mt-6 is-centered">
 
-<div>
-  <%= link_to "Edit this entry", edit_entry_path(@entry) %> |
-  <%= link_to "Back to entries", entries_path %>
+<div class ="column is-one-third">
+<nav class ="panel is-link">
+  <header class="panel-header">
+  <p class = "panel-heading">
+   
+    <%= @entry.meal_type %>
+  </p>
+  </header>
 
-  <%= button_to "Destroy this entry", @entry, method: :delete %>
+  <div class = "panel-block">
+  <span class ="has-text-weight-bold"><strong>Calories:</strong>
+    <%= @entry.calories %></span>
+  </div>
+
+  <div class = "panel-block">
+  <span class ="has-text-weight-bold"><strong>Grams of protein:</strong>
+    <%= @entry.proteins %></span>
+  </div>
+
+  <div class = "panel-block">
+  <span class ="has-text-weight-bold"><strong>Grams of carbohydrates:</strong>
+    <%= @entry.carbohydrates %></span>
+  </div>
+
+  <div class = "panel-block">
+  <span class ="has-text-weight-bold"><strong>Grams of fat:</strong>
+    <%= @entry.fats %></span>
+  </div>
+  </nav>
+  
+  
+  <div class="columns is-mobile">
+  <div class = "column">
+      <%= link_to "Edit entry", edit_entry_path(@entry), class: "button is-gray" %>
+      <%= link_to "Destroy", @entry, method: :delete%>
+      </div>
+    </div>
+  </div></div>
+  
+  </div>
+  </div>
 </div>
