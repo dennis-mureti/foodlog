@@ -32,12 +32,14 @@
   </div>
   </nav>
   
-  
   <div class="columns is-mobile">
   <div class = "column">
       <%= link_to "Edit entry", edit_entry_path(@entry), class: "button is-gray" %>
-      <%= link_to "Destroy", @entry, method: :delete%>
+      <%= link_to "Delete", @entry, method: :delete, data: { confirm: "Are you sure?" }, class: "button is-gray" %>
       </div>
+      <div class="column">
+      </div>
+
     </div>
   </div></div>
   
