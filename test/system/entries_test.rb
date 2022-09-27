@@ -12,7 +12,7 @@ class EntriesTest < ApplicationSystemTestCase
 
   test "should create entry" do
     visit entries_url
-    click_on "New entry"
+    click_on "Create new entry"
 
     fill_in "Calories", with: @entry.calories
     fill_in "Carbohydrates", with: @entry.carbohydrates
@@ -22,7 +22,6 @@ class EntriesTest < ApplicationSystemTestCase
     click_on "Create Entry"
 
     assert_text "Entry was successfully created"
-    click_on "Back"
   end
 
   test "should update Entry" do

@@ -42,6 +42,14 @@
     <%= form.label :fats, style: "display: block", class: "label" %>
     <%= form.number_field :fats, class:"input" %>
   </div>
+
+  
+  <div>
+    <%= form.label :category_id, class: "label" %>
+    <div class = "select">
+    <%= form.select :category_id, Category.all.collect {|u| [u.title, u.id]} %>
+    </div>
+  </div>
   <br>
 
   <div>

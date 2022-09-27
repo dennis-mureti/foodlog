@@ -6,7 +6,7 @@
   <header class="card-header">
   <p class = "card-header-title">
    
-    <%= entry.meal_type %>
+    <%= entry.meal_type %> : <%= entry.category.title if entry.category.present? %>
   </p>
   </header>
 
